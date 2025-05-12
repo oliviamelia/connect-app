@@ -5,7 +5,7 @@ import { IconLogout2 } from "@tabler/icons-react";
 export default function User_Page() {
   return (
     <div id="container border-r-r border-black" className="flex h-screen">
-      <section id="navigation" className="bg-white p-4 w-[200px] shadow-md">
+      <section id="navigation" className="border-r-1 border-black bg-white p-4 w-[200px] shadow-md">
         <h1 className="text-2xl font-bold text-center text-gray-900 mb-6">Connect</h1>
         <div className="flex flex-col gap-2 mt-8">
           <button className="flex gap-2 items-center bg-gray-900 text-white rounded py-2 px-3">
@@ -24,10 +24,10 @@ export default function User_Page() {
           <input
             type="text"
             placeholder="Cari user"
-            className="w-full p-2 border rounded focus:outline-none focus:text-gray-500 focus:ring focus:ring-gray-100"/>
+            className="w-full p-2 border rounded border-r-r border-black focus:outline-none focus:text-gray-500 focus:ring focus:ring-gray-100"/>
         </div>
         <div id="List-users" className="space-y-2">
-          <div className="bg-white border rounded p-4 flex items-center justify-between">
+          <div className="bg-white border rounded p-4 border-r-r border-black flex items-center justify-between">
             <div>
               <h3 className="text-gray-900 font-semibold">Rahmat Saudi Al Fathir As</h3>
               <p className="text-gray-900 text-sm">rahmatsaudi@universitasmulia.ac.id</p>
@@ -38,7 +38,7 @@ export default function User_Page() {
             </div>
             <span className="text-gray-900 text-sm font-semibold">Aktif </span>
           </div>
-          <div className="bg-white border rounded p-4 flex items-center justify-between">
+          <div className="bg-white border rounded p-4 border-r-r border-black flex items-center justify-between">
             <div>
               <h3 className="text-gray-900 font-semibold">Lintang</h3>
               <p className="text-gray-900 text-sm">lintang@universitasmulia.ac.id </p>
@@ -48,7 +48,7 @@ export default function User_Page() {
             </div>
             <span className="text-gray-900 text-sm font-semibold">Aktif</span>
           </div>
-          <div className="bg-white border rounded p-4 flex items-center justify-between">
+          <div className="bg-white border rounded p-4 border-r-r border-black flex items-center justify-between">
             <div>
               <h3 className="text-gray-900 font-semibold">Shafira</h3>
               <p className="text-gray-900 text-sm">shafira@universitasmulia.ac.id</p>
@@ -58,7 +58,7 @@ export default function User_Page() {
             </div>
             <span className="text-gray-900 text-sm font-semibold"> Aktif</span>
           </div>
-          <div className="bg-white border rounded p-4 flex items-center justify-between">
+          <div className="bg-white border rounded p-4 border-r-r border-black flex items-center justify-between">
             <div>
               <h3 className="text-gray-900 font-semibold">Lebah Ganteng</h3>
               <p className="text-gray-900 text-sm">lebahganteng@universitasmulia.ac.id</p>
