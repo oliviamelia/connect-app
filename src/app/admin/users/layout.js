@@ -1,4 +1,4 @@
-import { IconKey, IconLogout, IconUser } from "@tabler/icons-react";
+import { IconKey, IconLogout, IconNews, IconUser } from "@tabler/icons-react";
 export default function AdminLayout({ children }) {
   return (
     <div id="container" className="flex w-screen h-screen bg-white font-sans text-black">
@@ -10,6 +10,9 @@ export default function AdminLayout({ children }) {
           </button>
           <button className="flex gap-2 items-center px-2 py-1 hover:bg-gray-100 rounded bg-black">
             <IconKey size={20} /> Hak Akses
+          </button>
+          <button className="flex gap-2 items-center px-2 py-1 hover:bg-gray-100 rounded bg-black">
+            <IconNews size={20} /> Berita
           </button>
           <button className="flex gap-2 items-center px-2 py-1 hover:bg-gray-100 rounded bg-black">
             <IconLogout size={20} /> Logout

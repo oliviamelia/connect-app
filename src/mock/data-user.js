@@ -1,4 +1,3 @@
-
 export const dataUser = [
   {
     fullname: "Olivia Amelia",
@@ -7,14 +6,14 @@ export const dataUser = [
     status: "Aktif",
   },
   {
-    fullname: "lintang",
-    email: "lintang@universitasmulia.ac.id",
+    fullname: "Shafira",
+    email: "shafira@universitasmulia.ac.id",
     role: "Admin",
     status: "Aktif",
   },
   {
-    fullname: "Shafira",
-    email: "shafira@universitasmulia.ac.id",
+    fullname: "lintang",
+    email: "lintang@universitasmulia.ac.id",
     role: "Admin",
     status: "Aktif",
   },
