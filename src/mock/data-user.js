@@ -1,26 +1,26 @@
 export const dataUser = [
   {
-    fullname: "Olivia Amelia",
-    email: "2313046@universitasmulia.ac.id",
+    fullname: "Rahmat saudi al-fatir",
+    email: "rahmatsaudi@universitasmulia.ac.id",
     role: "Admin",
     status: "Aktif",
   },
   {
     fullname: "Shafira",
     email: "shafira@universitasmulia.ac.id",
-    role: "Admin",
+    role: "Employee",
     status: "Aktif",
   },
   {
-    fullname: "lintang",
+    fullname: "Lintang",
     email: "lintang@universitasmulia.ac.id",
-    role: "Admin",
+    role: "Employee",
     status: "Aktif",
   },
   {
     fullname: "Lebah Ganteng",
     email: "lebahganteng@universitasmulia.ac.id",
-    role: "Admin",
-    status: "Aktif",
+    role: "Employee",
+    status: "Suspended",
   },
 ];

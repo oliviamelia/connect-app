@@ -8,30 +8,29 @@ export default function Users_Page() {
   const data = dataUser;
   const fetcher = (...args) => fetch(...args).then(res => res.json());
 
-   const { 
-    data: users,
-    error,
-    isLoading 
-  } = useSWR(`https://jsonplaceholder.typicode.com/users`, fetcher);
+  const {
+     data: users, 
+     error, 
+     isLoading
+     } = useSWR(`https://jsonplaceholder.typicode.com/users`, fetcher);
 
-  if (isLoading) {
-    return(
-      <div>
-        <p>loading...</p>
-      </div>
-    );
-  }
+    if(isLoading) {
+      return(
+        <div>
+          <p>loading...</p>
+        </div>
+      );
+    }
 
-  if (error) {
-    return(
-      <div>
-        <p>Gagal membuat data</p>
-      </div>
-    );
-  }
+    if(error) {
+      return(
+        <div>
+          <p>Gagal membuat data</p>
+        </div>
+      )
+    }
 
-  console.log(users);
-
+    console.log(users);
 
   return (
       <section id="content" >
@@ -46,8 +45,8 @@ export default function Users_Page() {
               key={index}
               fullname={employee.name}
               email={employee.email}
-              role={employee.role}
-              status={employee.status}
+              role={employee.address.street}
+              status={employee.address.city}
             />
           ))}
         </div>

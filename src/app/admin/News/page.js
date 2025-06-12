@@ -1,60 +1,52 @@
-"use client";
+'use client';
 import UserCard from "@/components/ui/user-card";
 import { dataUser } from "@/mock/data-user";
-import { IconPlus } from "@tabler/icons-react";
-import useSWR from "swr";
+import useSWR from 'swr';
 
-export default function Users_Page() {
-  const data = dataUser;
+export default function NewsPage(){
   const fetcher = (...args) => fetch(...args).then(res => res.json());
+  
+  const {
+     data: users, 
+     error, 
+     isLoading
+     } = useSWR(`https://jsonplaceholder.typicode.com/posts`,fetcher);
 
-   const { 
-    data: users,
-    error,
-    isLoading 
-  } = useSWR(`https://jsonplaceholder.typicode.com/users`, fetcher);
+    if(isLoading) {
+      return(
+        <div>
+          <p>loading...</p>
+        </div>
+      );
+    }
 
-  if (isLoading) {
+    if(error) {
+      return(
+        <div>
+          <p>Gagal membuat data</p>
+        </div>
+      )
+    }
+
+    console.log(users);
     return(
-      <div>
-        <p>loading...</p>
-      </div>
-    );
-  }
-
-  if (error) {
-    return(
-      <div>
-        <p>Gagal membuat data</p>
-      </div>
-    );
-  }
-
-  console.log(users);
-
-
-  return (
-      <section id="content" >
+        <section id="content" className="bg-white w-80%" >
+        <div className="flex justify-center h-30 py-8">
         <input
           type="text"
-          placeholder="Cari Users"
-          className="w-full border px-4 py-2 rounded mb-6 placeholder-gray-600 text-black"
+          placeholder="Cari user"
+          className="border-2 border-gray p-5 w-385 rounded-lg text-black "
         />
-        <div id="list-users" className="flex flex-col gap-4">
-          {users.map((employee, index) => (
-            <UserCard
-              key={index}
-              fullname={employee.name}
-              email={employee.email}
-              role={employee.role}
-              status={employee.status}
-            />
-          ))}
         </div>
-        <button className="absolute bottom-6 right-6 bg-gray-200 hover:bg-gray-300 p-3 rounded shadow text-black">
-          <IconPlus size={20} />
-        </button>
-      </section>
-
+        {users.map((Employee, index) => (
+        <UserCard
+          key={index}
+          fullname={Employee.title}
+          email={Employee.body}
+          role={Employee.UserId}
+          status={Employee.id}
+        />
+        ))}
+        </section>
   );
 }
