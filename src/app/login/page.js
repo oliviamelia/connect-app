@@ -1,47 +1,37 @@
-'use client';
-
-import { useRouter } from 'next/navigation';
-import { useState } from 'react';
-
+'use client';import { useRouter } from 'next/navigation';
 export default function LoginPage() {
-  const router = useRouter();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+const router = useRouter();
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if (email && password) {
-      router.push('/dashboard');
-    } else {
-      alert('Email dan password wajib diisi!');
-    }
+    router.push('/admin/users');
   };
 
   return (
-    <div className="flex items-center justify-center h-screen bg-white">
-      <form onSubmit={handleLogin} className="flex flex-col w-[300px] gap-3">
-        <h1 className="text-2xl font-bold text-center">Connect With Us</h1>
-        <input
-          type="email"
-          placeholder="Email"
-          className="border px-3 py-2 rounded"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          className="border px-3 py-2 rounded"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button
-          type="submit"
-          className="bg-black text-white py-2 rounded font-semibold"
-        >
-          Sign In
-        </button>
-      </form>
+    <div className="min-h-screen flex items-center justify-center bg-white">
+      <div className="w-full max-w-sm p-6 rounded-lg shadow-lg">
+        <h2 className="text-2xl font-bold text-center mb-6">Connect With Us</h2>
+        <form onSubmit={handleLogin} className="space-y-4">
+          <input
+            type="email"
+            placeholder="Email"
+            className="w-full px-4 py-2 border rounded"
+            disabled
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            className="w-full px-4 py-2 border rounded"
+            disabled
+          />
+          <button
+            type="submit"
+            className="w-full py-2 bg-black text-white font-semibold rounded"
+          >
+            Sign In
+          </button>
+        </form>
+      </div>
     </div>
   );
 }
